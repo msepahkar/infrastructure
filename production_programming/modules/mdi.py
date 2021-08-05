@@ -91,19 +91,19 @@ class MainWindow(QtWidgets.QMainWindow):
     # ===========================================================================
     def create_actions(self):
         # noinspection PyAttributeOutsideInit,PyArgumentList,PyArgumentList,PyArgumentList
-        self.new_act = QtWidgets.QAction(QtGui.QIcon('../resources/new.png'), "&new", self,
+        self.new_act = QtWidgets.QAction(QtGui.QIcon('resources/new.png'), "&new", self,
                                          shortcut=QtGui.QKeySequence.New, statusTip="Create a new part",
                                          triggered=self.new_item)
 
         # noinspection PyAttributeOutsideInit,PyArgumentList,PyArgumentList,PyArgumentList
-        self.open_all_parts_act = QtWidgets.QAction(QtGui.QIcon('../resources/parts.png'), "open all parts",
+        self.open_all_parts_act = QtWidgets.QAction(QtGui.QIcon('resources/parts.png'), "open all parts",
                                                     self,
                                                     # shortcut=QtGui.QKeySequence.Open,
                                                     statusTip="Opens all parts",
                                                     triggered=lambda: self.open_new_window(part_things.Part.all()))
 
         # noinspection PyAttributeOutsideInit,PyArgumentList,PyArgumentList,PyArgumentList
-        self.open_all_providers_act = QtWidgets.QAction(QtGui.QIcon('../resources/providers.png'), "open all providers",
+        self.open_all_providers_act = QtWidgets.QAction(QtGui.QIcon('resources/providers.png'), "open all providers",
                                                         self,
                                                         # shortcut=QtGui.QKeySequence.Open,
                                                         statusTip="Opens all providers",
@@ -111,7 +111,7 @@ class MainWindow(QtWidgets.QMainWindow):
                                                             part_things.Provider.all()))
 
         # noinspection PyAttributeOutsideInit,PyArgumentList,PyArgumentList,PyArgumentList
-        self.open_all_specialties_act = QtWidgets.QAction(QtGui.QIcon('../resources/specialties.png'), "open all specialties",
+        self.open_all_specialties_act = QtWidgets.QAction(QtGui.QIcon('resources/specialties.png'), "open all specialties",
                                                           self,
                                                           # shortcut=QtGui.QKeySequence.Open,
                                                           statusTip="Opens all specialties",
@@ -119,29 +119,29 @@ class MainWindow(QtWidgets.QMainWindow):
                                                               specialty_things.Specialty.all()))
 
         # noinspection PyAttributeOutsideInit,PyArgumentList,PyArgumentList,PyArgumentList
-        self.open_selected_act = QtWidgets.QAction(QtGui.QIcon('../resources/open.png'), "&open...",
+        self.open_selected_act = QtWidgets.QAction(QtGui.QIcon('resources/open.png'), "&open...",
                                                    self,
                                                    shortcut=QtGui.QKeySequence.Open,
                                                    statusTip="Open an existing item",
                                                    triggered=self.open_selected_item_in_new_window)
 
         # noinspection PyAttributeOutsideInit,PyArgumentList,PyArgumentList,PyArgumentList
-        self.save_act = QtWidgets.QAction(QtGui.QIcon('../resources/save.png'), "&save", self,
+        self.save_act = QtWidgets.QAction(QtGui.QIcon('resources/save.png'), "&save", self,
                                           shortcut=QtGui.QKeySequence.Save, statusTip="Saves current window to disk",
                                           triggered=self.save)
 
         # noinspection PyAttributeOutsideInit,PyArgumentList,PyArgumentList,PyArgumentList
-        self.save_all_act = QtWidgets.QAction(QtGui.QIcon('../resources/save_all.jpg'), "s&ave all", self,
+        self.save_all_act = QtWidgets.QAction(QtGui.QIcon('resources/save_all.jpg'), "s&ave all", self,
                                           shortcut=QtGui.QKeySequence.Save, statusTip="Saves all windows to disk",
                                           triggered=self.save_all)
 
         # noinspection PyAttributeOutsideInit,PyArgumentList,PyArgumentList,PyArgumentList
-        self.remove_act = QtWidgets.QAction(QtGui.QIcon('../resources/remove.png'), "&remove", self,
+        self.remove_act = QtWidgets.QAction(QtGui.QIcon('resources/remove.png'), "&remove", self,
                                             shortcut=QtGui.QKeySequence.Delete, statusTip="remove the selected item",
                                             triggered=self.remove_item)
 
         # noinspection PyAttributeOutsideInit,PyArgumentList,PyArgumentList,PyArgumentList
-        self.revive_act = QtWidgets.QAction(QtGui.QIcon('../resources/revive.jpg'), "re&vive", self,
+        self.revive_act = QtWidgets.QAction(QtGui.QIcon('resources/revive.jpg'), "re&vive", self,
                                             shortcut=QtGui.QKeySequence.Delete, statusTip="revive the removed item",
                                             triggered=self.revive_item)
 
@@ -151,19 +151,19 @@ class MainWindow(QtWidgets.QMainWindow):
                                           triggered=QtWidgets.QApplication.instance().closeAllWindows)
 
         # noinspection PyAttributeOutsideInit,PyArgumentList,PyArgumentList,PyArgumentList
-        self.cut_act = QtWidgets.QAction(QtGui.QIcon('../resources/cut.png'), "cu&t", self,
+        self.cut_act = QtWidgets.QAction(QtGui.QIcon('resources/cut.png'), "cu&t", self,
                                          shortcut=QtGui.QKeySequence.Cut,
                                          statusTip="Cut the current selection's contents to the clipboard",
                                          triggered=self.cut)
 
         # noinspection PyAttributeOutsideInit,PyArgumentList,PyArgumentList,PyArgumentList
-        self.copy_act = QtWidgets.QAction(QtGui.QIcon('../resources/copy.png'), "&Copy", self,
+        self.copy_act = QtWidgets.QAction(QtGui.QIcon('resources/copy.png'), "&Copy", self,
                                           shortcut=QtGui.QKeySequence.Copy,
                                           statusTip="Copy the current selection's contents to the clipboard",
                                           triggered=self.copy)
 
         # noinspection PyAttributeOutsideInit,PyArgumentList,PyArgumentList,PyArgumentList
-        self.paste_act = QtWidgets.QAction(QtGui.QIcon('../resources/paste.png'), "&Paste", self,
+        self.paste_act = QtWidgets.QAction(QtGui.QIcon('resources/paste.png'), "&Paste", self,
                                            shortcut=QtGui.QKeySequence.Paste,
                                            statusTip="Paste the clipboard's contents into the current selection",
                                            triggered=self.paste)
