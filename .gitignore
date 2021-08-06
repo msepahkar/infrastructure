@@ -4,3 +4,5 @@ UML for production programming/
 *.pyc
 *.sqlite
 *.db
+venv-for-infrastructure
+
