@@ -7,17 +7,17 @@ pytestmark = pytest.mark.basics
 
 
 # ===========================================================================
-class TestingThingPrototype(prototype_.ThingPrototype):
+class TempThingPrototype(prototype_.ThingPrototype):
     pass
 
 
 # ===========================================================================
-class TestingThing(thing_.Thing):
+class TempThing(thing_.Thing):
     pass
 
 
 # ===========================================================================
 def test_Prototype():
-    assert TestingThingPrototype.get_main_type() == TestingThing
-    assert prototype_.Prototype.get_prototype(TestingThing) == TestingThingPrototype
-    assert TestingThingPrototype.referencing_prototypes() == []
+    assert TempThingPrototype.get_main_type() == TempThing
+    assert prototype_.Prototype.get_prototype(TempThing) == TempThingPrototype
+    assert TempThingPrototype.referencing_prototypes() == []
