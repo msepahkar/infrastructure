@@ -5,4 +5,4 @@ UML for production programming/
 *.sqlite
 *.db
 venv-for-infrastructure
-
+.coverage
