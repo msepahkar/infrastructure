@@ -8,12 +8,8 @@ pyparsing==2.4.7
 PyQt5==5.15.4
 PyQt5-Qt5==5.15.2
 PyQt5-sip==12.9.0
-PyQt5-stubs==5.15.2.0
-PySide2==5.15.2
 pytest==6.2.4
 pytest-qt==4.0.2
 python-dateutil==2.8.2
-qtwidgets==0.18
-shiboken2==5.15.2
 six==1.16.0
 toml==0.10.2

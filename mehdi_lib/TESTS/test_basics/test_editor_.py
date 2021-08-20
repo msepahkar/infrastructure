@@ -4,7 +4,6 @@ import pytest
 from pytestqt.qt_compat import qt_api
 from PyQt5 import QtWidgets, QtCore
 import typing
-from PySide2 import QtWidgets
 
 pytestmark = pytest.mark.basics
 
@@ -160,7 +159,7 @@ class Test__Editor__Removing_Reviving_AddingNew:
                 super_things_editor.sub_editors[super_thing].sub_editors[SuperThing.things].sub_editors) == 2
 
         # create the application
-        assert QtWidgets.QApplication.instance() is not None
+        assert qt_api.QApplication.instance() is not None
 
         # **************************************************************
         # 1-adding new item to top editor with is_top_editor set to False
@@ -315,7 +314,7 @@ class Test__Editor__Removing_Reviving_AddingNew:
                 go_deep=False)
 
         # create the application
-        assert QtWidgets.QApplication.instance() is not None
+        assert qt_api.QApplication.instance() is not None
 
         # **************************************************************
         # 1-simplest state. one thing with one selected sub-editor
@@ -388,7 +387,7 @@ class Test__Editor__Removing_Reviving_AddingNew:
             assert sub_editor not in super_things_editor.sub_editors_marked_for_removal
 
         # create the application
-        assert QtWidgets.QApplication.instance() is not None
+        assert qt_api.QApplication.instance() is not None
 
         remove_marked_sub_editor(list_of_things_editor=general_editors.TreeOfThingsEditor)
         remove_marked_sub_editor(list_of_things_editor=general_editors.TableOfThingsEditor)
@@ -449,7 +448,7 @@ class Test__Editor__Removing_Reviving_AddingNew:
             assert not sub_editor_2.is_selected(go_deep=False)
 
         # create the application
-        assert QtWidgets.QApplication.instance() is not None
+        assert qt_api.QApplication.instance() is not None
 
         remove_and_revive(list_of_things_editor=general_editors.TreeOfThingsEditor)
         remove_and_revive(list_of_things_editor=general_editors.TableOfThingsEditor)
@@ -480,7 +479,7 @@ class Test__Editor__Selection:
             assert not editor_.Editor__Selection.multiple_selection
 
         # create the application
-        assert QtWidgets.QApplication.instance() is not None
+        assert qt_api.QApplication.instance() is not None
         multiple_selection(list_of_things_editor=general_editors.TreeOfThingsEditor)
         multiple_selection(list_of_things_editor=general_editors.TableOfThingsEditor)
 
@@ -573,7 +572,7 @@ class Test__Editor__Selection:
             assert not super_things_tree_editor.is_selected(go_deep=False)
 
         # create the application
-        assert QtWidgets.QApplication.instance() is not None
+        assert qt_api.QApplication.instance() is not None
 
         select_editor(list_of_things_editor=general_editors.TreeOfThingsEditor)
         select_editor(list_of_things_editor=general_editors.TableOfThingsEditor)
@@ -816,7 +815,7 @@ class Test__Editor__Selection:
             assert thing_editor.is_selected(go_deep=False)
 
         # create the application
-        assert QtWidgets.QApplication.instance() is not None
+        assert qt_api.QApplication.instance() is not None
 
         # single
         single_selection(list_of_things_editor=general_editors.TreeOfThingsEditor)
@@ -862,7 +861,7 @@ class Test__Editor__Selection:
             assert super_things_editor.selected_item_editor() == editor
 
         # create the application
-        assert QtWidgets.QApplication.instance() is not None
+        assert qt_api.QApplication.instance() is not None
 
         select_item_editor(general_editors.TreeOfThingsEditor)
         select_item_editor(general_editors.TableOfThingsEditor)
@@ -936,7 +935,7 @@ class Test__Editor__Selection:
             assert not thing_3_editor.is_selected(go_deep=False)
 
         # create the application
-        assert QtWidgets.QApplication.instance() is not None
+        assert qt_api.QApplication.instance() is not None
 
         create_remove_test_selection(general_editors.TreeOfThingsEditor)
         create_remove_test_selection(general_editors.TableOfThingsEditor)
@@ -1090,7 +1089,7 @@ class TestEditorDialog:
         """Checks correct operation of all the things done in __init__ method"""
 
         # create the application
-        assert QtWidgets.QApplication.instance() is not None
+        assert qt_api.QApplication.instance() is not None
 
         # first check the field editor
         thing = Thing()
