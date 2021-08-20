@@ -566,7 +566,7 @@ class Thing(field_.Field):
             for item in dir(sys.modules[module]):
                 try:
                     cls = getattr(imported_module, item)
-                except ImportError:
+                except (ImportError, AttributeError):
                     continue
 
                 if inspect.isclass(cls) and cls != Thing and Thing in inspect.getmro(cls) and cls not in things:
